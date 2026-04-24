@@ -36,6 +36,9 @@ if [[ ${#input_files[@]} -eq 0 ]]; then
     exit 1
 fi
 
+# Create output directory if it doesn't exist
+mkdir -p "$OUTPUT_DIR"
+
 for input_file in "${input_files[@]}"; do
     filename=$(basename "$input_file")
     output_file="${OUTPUT_DIR}/${filename}"
