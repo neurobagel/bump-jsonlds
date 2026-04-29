@@ -60,7 +60,7 @@ elif [[ "$same_dir" -eq 0 && "$IN_PLACE" -eq 1 ]]; then
     echo "WARNING: --inplace will be ignored since input and output directories are different." >&2
 fi
 
-# Build sed expression from hardcoded mapping
+# We're building ${SED_EXPR} incrementally for each mapping for readability
 SED_EXPR=""
 add() { SED_EXPR="${SED_EXPR}s|${1}|${2}|g;"; }
  
