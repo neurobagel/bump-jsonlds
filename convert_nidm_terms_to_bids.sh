@@ -11,7 +11,7 @@ fi
 INPUT_DIR="$1"
 OUTPUT_DIR="$2"
 
-# Build sed expression from hardcoded mapping
+# We're building ${SED_EXPR} incrementally for each mapping for readability
 SED_EXPR=""
 add() { SED_EXPR="${SED_EXPR}s|${1}|${2}|g;"; }
  
